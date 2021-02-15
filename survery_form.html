@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: url(https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        }
+        #title{
+            text-align: center;
+            font-family: 'Reggae One';
+            color: blue;
+        }
+        #description{
+            text-align: center;
+            font-family: 'Dosis','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            color: blue;
+        }
+        #survey-form{
+            position: relative;
+            border: 1px;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: lightsalmon;
+            padding: 15px 30px 15px 30px;
+            background-color: hsl(81, 74%, 62%);
+            height: auto;
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 20px rgba(27, 17, 155, 0.2);
+            animation-name: jump;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            
+        }
+        @keyframes jump {
+            0%{
+                top: 0px;
+            }
+            50%{
+                top: 500px;
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.7);
+            }
+            100%{
+                top: 0px;
+            }
+        }
+        .labels{
+            padding: 10px;
+            font-family: 'Dosis','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+            
+        }
+        .input-fields{
+            margin-left: 10px;
+            padding: 8px;
+            font-family: 'Dosis','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #submit{
+            background-color: yellow;
+        }
+        #dropdown{
+            margin-left: 10px;
+            padding: 8px;
+            font-family: 'Dosis','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #checkboxes{
+            margin-left: 10px;
+        }
+        #comments {
+            margin-left: 10px;
+        }
+        #rating{
+            margin-left: 10px;
+        }
+        /* #cbs{
+            display: grid;
+            grid-template-columns: 5px 20px;
+            grid-gap: 1px;
+        } */
+    </style>
+
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">freeCodeCamp Survery Form</h1>
+    </header>
+        <p id="description"><strong>Thank you for taking the time to help us improve the platform.</strong></p>
+        <form id="survey-form">
+            
+            <label class="labels" id="name-label" for="name"><strong>Name</strong></label>
+            <input type="text" class="input-fields" id="name" placeholder="Enter your name" required>
+            <label class="labels" id="email-label" for="email"><strong>Email</strong></label>
+            <input type="email" class="input-fields" id="email" placeholder="Enter your email" required>
+            <label class="labels" id="number-label" for="number"><strong>Age</strong></label>
+            <input type="number" min="0" max="100" class="input-fields" id="number" placeholder="Enter your age">
+            <label class="labels" id="number-label" for="dropdown"><strong>Which option best describes your current role</strong></label>
+            <select name="dropdown" id="dropdown" >
+                <option value="role" disabled selected>Select your current role</option>
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+            </select>
+
+            <fieldset id="checkboxes">
+                <legend class="labels"><strong>Pick your most favorite topics</strong></legend>
+                <div id="cbs">
+                    <input type="checkbox" name="python" id="python" value="python">
+                    <label class="labels"  for="python"><strong>Python</strong></label>
+                    <br>
+                    <input type="checkbox" name="javascript" id="javascript" value="javascript">
+                    <label class="labels"  for="javascript"><strong>JavaScript</strong></label>
+                </div>
+
+            </fieldset>
+            <fieldset id="rating">
+                <legend class="labels"><strong>Please rate us!</strong></legend>
+                <input type="radio" name="rating" value="good" id="rb1">
+                <label class="labels"  for="rb1"><strong>Good</strong></label>
+                <input type="radio" name="rating" value="ok" id="rb2">
+                <label class="labels"  for="rb2"><strong>Okay</strong></label>
+                <input type="radio" name="rating" value="bad" id="rb3">
+                <label class="labels"  for="rb3"><strong>Bad</strong></label>
+
+            </fieldset>
+            <br>
+            <textarea id="comments" name="comments" placeholder="Please enter your comments here..." rows="4" cols="50">
+                
+            </textarea>
+            <br>
+            <input type="submit" class="input-fields" id="submit">
+            
+        </form>
+    
+</body>
