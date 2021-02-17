@@ -65,3 +65,18 @@ print('-'*100)
 
 #If we want to convert str type to int type,
 # compulsary str should contain only integral value and should be specified in base-10
+
+"""
+bool(0)==>False
+ 2) bool(1)==>True 
+ 3) bool(10)===>True 
+ 4) bool(10.5)===>True 
+ 5) bool(0.178)==>True 
+ 6) bool(0.0)==>False 
+ 7) bool(10-2j)==>True 
+ 8) bool(0+1.5j)==>True 
+ 9) bool(0+0j)==>False 
+ 10) bool("True")==>True 
+ 11) bool("False")==>True 
+ 12) bool("")==>False
+"""
