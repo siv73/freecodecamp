@@ -80,3 +80,51 @@ bool(0)==>False
  11) bool("False")==>True 
  12) bool("")==>False
 """
+
+print('-'*100)
+#for bytes only allowed numbers are 0 to 256
+by_val = [10,20,30,40]
+print(by_val)
+by_val = bytes(by_val)
+print(by_val)
+for v in by_val:
+    print(v)
+# by_val[1] = 30
+# TypeError: 'bytes' object does not support item assignment
+
+print('-'*100)
+
+# bytearray is exactly same as bytes data type except that its elements can be modified.
+print('-'*100)
+by_arr = [10,20,30,40]
+by_arr = bytearray(by_arr)
+print('Before changing')
+print(by_arr)
+print('After changing')
+by_arr[0] = 11
+print(by_arr)
+for val in by_arr:
+    print(val)
+print('-'*100)
+
+for i in range(10):
+    print(i)
+print('-'*100)
+
+my_set = set(list(range(10)))
+print(my_set)
+# my_set[0] = 12
+# print(my_set)
+# TypeError: 'set' object does not support item assignment
+
+print('-'*100)
+
+my_fset = frozenset(set(list(range(20))))
+print(my_fset)
+
+# my_fset[0] = 11
+# print(my_fset)
+# TypeError: 'frozenset' object does not support item assignment
+# my_fset.add(0)
+# print(my_fset)
+# It is exactly same as set except that it is immutable.
