@@ -46,3 +46,22 @@ print(y)
 print(y.real)
 print(type(2+3j))
 print('-'*100)
+
+print('-'*100)
+print('Strings')
+
+name = 'Sachin'
+print(name[1:2])
+print(name[:])
+print('-'*100)
+
+print('-'*100)
+print('Python cannot convert complex type to int')
+try:
+    print(int("10.2"))
+except:
+    print(r'ValueError: invalid literal for int() with base 10: "10.2"')
+print('-'*100)
+
+#If we want to convert str type to int type,
+# compulsary str should contain only integral value and should be specified in base-10
